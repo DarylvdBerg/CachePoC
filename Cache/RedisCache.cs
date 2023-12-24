@@ -1,32 +1,35 @@
 ﻿
 using Newtonsoft.Json;
+using StackExchange.Redis;
 
 namespace Cache;
 
 public class RedisCache : ICacheService
 {
-    private readonly ICacheImplementation _impl;
+    private readonly IDatabase _db;
 
-    public RedisCache(ICacheImplementation impl) 
+    public RedisCache() 
     {
-        _impl = impl;
+        var redis = ConnectionMultiplexer.Connect("localhost");
+        _db = redis.GetDatabase();
     }
 
     public void Add(ICacheEntry key, string value)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(key.CacheKey);
-        _impl.Set(key.CacheKey, value);
+        _db.StringSet(key.CacheKey, value, expiry: TimeSpan.FromMinutes(10));
     }
 
     public TResult Get<TResult>(ICacheEntry key, Func<TResult> callback) where TResult : ICacheEntry
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(key.CacheKey);
-        var result = _impl.Get(key.CacheKey);
-        if(string.IsNullOrWhiteSpace(result)) {
+        var result = _db.StringGet(key.CacheKey);
+        if(string.IsNullOrWhiteSpace(result)) 
+        {
             Console.WriteLine("NO HIT IN REDIS");
             var fromCache = callback.Invoke();
             var serialized = JsonConvert.SerializeObject(fromCache);
-            _impl.Set(key.CacheKey, serialized);
+            Add(fromCache, serialized);
             return fromCache;
         }
 

@@ -29,7 +29,6 @@ public class Program {
     }
 
     private static void RegisterCache(IServiceCollection services) {
-        services.AddSingleton<ICacheImplementation, RedisImplementation>();
         services.AddKeyedSingleton<ICacheService, MemoryCache>("memory");
         services.AddKeyedSingleton<ICacheService, RedisCache>("redis");
     }

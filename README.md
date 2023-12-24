@@ -11,11 +11,11 @@ This implementation will be called if them data in the memory cache is not prese
 ## Source
 Currently returns a hard coded object, but should be the source (ex: database, CMS) for getting the data.
 
-#Abstractions
+# Abstractions
 Exposes a few interfaces to implement the services and caching layers
 
-#ICacheSerivce
+# ICacheSerivce
 Interface to build concrete caching services against (redis or memory cache for example)
 
-#ICacheEntry
+# ICacheEntry
 Interface to expose a property for setting a cache key format.

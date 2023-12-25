@@ -21,16 +21,16 @@ public class TestController : ControllerBase
         var redisCache = _provider.GetRequiredKeyedService<ICacheService>("redis");
         Console.WriteLine("TEST");
         // Create product.
-        var product = new Product() {
-            Id = "ababa",
-            Name = "Test",
-            Price = 14
-        };
+        var key = "Product.ababa";
 
         // Get from cache(s)
-        var result = memoryCache.Get(product, () => {
-            return redisCache.Get(product, () => {
-                return product;
+        var result = memoryCache.Get(key, () => {
+            return redisCache.Get(key, () => {
+                return new Product() {
+                    Id = "ababa",
+                    Name = "Test",
+                    Price = 14
+                };
             });
         });
 

@@ -15,21 +15,22 @@ public class MemoryCache : ICacheService
         _cache = cache;
     }
 
-    public void Add(ICacheEntry key, string value)
+    public void Add(string key, string value)
     {
-        ArgumentException.ThrowIfNullOrEmpty(key.CacheKey);
-        _cache.Set(key.CacheKey, value, new MemoryCacheEntryOptions().SetAbsoluteExpiration(TimeSpan.FromSeconds(300)));
+        ArgumentException.ThrowIfNullOrEmpty(key);
+        _cache.Set(key, value, new MemoryCacheEntryOptions().SetAbsoluteExpiration(TimeSpan.FromSeconds(300)));
     }
 
-    public TResult Get<TResult>(ICacheEntry key, Func<TResult> callback) where TResult : ICacheEntry
+    public TResult Get<TResult>(string key, Func<TResult> callback) where TResult : ICacheEntry
     {
-        ArgumentException.ThrowIfNullOrWhiteSpace(key.CacheKey);
-        var result = _cache.Get<string>(key.CacheKey);
+        ArgumentException.ThrowIfNullOrWhiteSpace(key);
+        var result = _cache.Get<string>(key);
         if(string.IsNullOrWhiteSpace(result)) {
             Console.WriteLine("NO HIT IN MEMORY");
             var fromCache = callback.Invoke();
             var serialized = JsonConvert.SerializeObject(fromCache);
-            Add(fromCache, serialized);
+            ArgumentException.ThrowIfNullOrWhiteSpace(fromCache.CacheKey);
+            Add(fromCache.CacheKey, serialized);
             return fromCache;
         }
 

@@ -1,12 +1,12 @@
 ﻿namespace Cache;
 
-public interface IProduct : ICacheEntry {
+public interface IProduct {
     string? Id {get; }
     string? Name {get;}
     decimal? Price {get;}
 }
 
-public class Product : IProduct
+public class Product : IProduct, ICacheEntry
 {
     public string? CacheKey => $"Product.{Id}";
 

@@ -14,22 +14,23 @@ public class RedisCache : ICacheService
         _db = redis.GetDatabase();
     }
 
-    public void Add(ICacheEntry key, string value)
+    public void Add(string key, string value)
     {
-        ArgumentException.ThrowIfNullOrWhiteSpace(key.CacheKey);
-        _db.StringSet(key.CacheKey, value, expiry: TimeSpan.FromMinutes(10));
+        ArgumentException.ThrowIfNullOrWhiteSpace(key);
+        _db.StringSet(key, value, expiry: TimeSpan.FromMinutes(10));
     }
 
-    public TResult Get<TResult>(ICacheEntry key, Func<TResult> callback) where TResult : ICacheEntry
+    public TResult Get<TResult>(string key, Func<TResult> callback) where TResult : ICacheEntry
     {
-        ArgumentException.ThrowIfNullOrWhiteSpace(key.CacheKey);
-        var result = _db.StringGet(key.CacheKey);
+        ArgumentException.ThrowIfNullOrWhiteSpace(key);
+        var result = _db.StringGet(key);
         if(string.IsNullOrWhiteSpace(result)) 
         {
             Console.WriteLine("NO HIT IN REDIS");
             var fromCache = callback.Invoke();
             var serialized = JsonConvert.SerializeObject(fromCache);
-            Add(fromCache, serialized);
+            ArgumentException.ThrowIfNullOrWhiteSpace(fromCache.CacheKey);
+            Add(fromCache.CacheKey, serialized);
             return fromCache;
         }
 

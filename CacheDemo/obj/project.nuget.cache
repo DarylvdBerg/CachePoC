@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "17ZcFYlclBsk4MXLHFaLrHbanyT83TbfzLRzG/PRUBQziQoR8KDPrReBbKve1iOR8PGeWKWlleN2uWxC6KKpGg==",
+  "dgSpecHash": "P4qMpyA62wujsSPRZUnzvuCi8YP3kVfLnl/XpbE0D6qzzq69VsWgkhPSZYx1q4NIzzc/W1Q6I8ErhltgNsY2Pg==",
   "success": true,
-  "projectFilePath": "/Users/daryl/Documents/projects/CacheDemo/CacheDemo/CacheDemo.csproj",
+  "projectFilePath": "/Users/daryl/Documents/projects/CachePoC/CacheDemo/CacheDemo.csproj",
   "expectedPackageFiles": [
     "/Users/daryl/.nuget/packages/microsoft.aspnetcore.openapi/8.0.0/microsoft.aspnetcore.openapi.8.0.0.nupkg.sha512",
     "/Users/daryl/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",

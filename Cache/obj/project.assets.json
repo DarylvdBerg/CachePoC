@@ -1070,11 +1070,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/daryl/Documents/projects/CacheDemo/Cache/Cache.csproj",
+      "projectUniqueName": "/Users/daryl/Documents/projects/CachePoC/Cache/Cache.csproj",
       "projectName": "Cache",
-      "projectPath": "/Users/daryl/Documents/projects/CacheDemo/Cache/Cache.csproj",
+      "projectPath": "/Users/daryl/Documents/projects/CachePoC/Cache/Cache.csproj",
       "packagesPath": "/Users/daryl/.nuget/packages/",
-      "outputPath": "/Users/daryl/Documents/projects/CacheDemo/Cache/obj/",
+      "outputPath": "/Users/daryl/Documents/projects/CachePoC/Cache/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/daryl/.nuget/NuGet/NuGet.Config"

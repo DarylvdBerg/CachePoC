@@ -6,7 +6,7 @@ public interface IProduct {
     decimal? Price {get;}
 }
 
-public class Product : IProduct, ICacheEntry
+public sealed class Product : IProduct, ICacheEntry
 {
     public string? CacheKey => $"Product.{Id}";
 

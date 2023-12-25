@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8ApAq3IjYafWwWksuqm6P3wxe6crfHyowZu9VJS5NrfeOrmVwomMYVnz6OgXzsMBR2r0NBBaBAAXzreKTL/xKg==",
+  "dgSpecHash": "6FSADxYM64Ay5RndOhICtK8kewy5U++5ycmj01Z53fuWA5pJVGbgOiOnUF86z8rJ8/dgeeK9iE9L4Lm92LE96g==",
   "success": true,
-  "projectFilePath": "/Users/daryl/Documents/projects/CacheDemo/Cache/Cache.csproj",
+  "projectFilePath": "/Users/daryl/Documents/projects/CachePoC/Cache/Cache.csproj",
   "expectedPackageFiles": [
     "/Users/daryl/.nuget/packages/microsoft.extensions.caching.abstractions/8.0.0/microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
     "/Users/daryl/.nuget/packages/microsoft.extensions.caching.memory/8.0.0/microsoft.extensions.caching.memory.8.0.0.nupkg.sha512",

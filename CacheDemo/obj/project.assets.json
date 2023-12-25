@@ -1537,11 +1537,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/daryl/Documents/projects/CacheDemo/CacheDemo/CacheDemo.csproj",
+      "projectUniqueName": "/Users/daryl/Documents/projects/CachePoC/CacheDemo/CacheDemo.csproj",
       "projectName": "CacheDemo",
-      "projectPath": "/Users/daryl/Documents/projects/CacheDemo/CacheDemo/CacheDemo.csproj",
+      "projectPath": "/Users/daryl/Documents/projects/CachePoC/CacheDemo/CacheDemo.csproj",
       "packagesPath": "/Users/daryl/.nuget/packages/",
-      "outputPath": "/Users/daryl/Documents/projects/CacheDemo/CacheDemo/obj/",
+      "outputPath": "/Users/daryl/Documents/projects/CachePoC/CacheDemo/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/daryl/.nuget/NuGet/NuGet.Config"
@@ -1556,8 +1556,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/daryl/Documents/projects/CacheDemo/Cache/Cache.csproj": {
-              "projectPath": "/Users/daryl/Documents/projects/CacheDemo/Cache/Cache.csproj"
+            "/Users/daryl/Documents/projects/CachePoC/Cache/Cache.csproj": {
+              "projectPath": "/Users/daryl/Documents/projects/CachePoC/Cache/Cache.csproj"
             }
           }
         }

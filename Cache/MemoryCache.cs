@@ -1,5 +1,4 @@
-﻿
-using System.Runtime.Caching;
+﻿using System.Runtime.Caching;
 using System.Runtime.Caching.Hosting;
 using System.Text.Json.Serialization;
 using Microsoft.Extensions.Caching.Memory;
@@ -7,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace Cache;
 
-public class MemoryCache : ICacheService
+internal sealed class MemoryCache : ICacheService
 {
     private readonly IMemoryCache _cache;
     public MemoryCache(IMemoryCache cache) 

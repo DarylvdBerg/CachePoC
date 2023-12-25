@@ -7,7 +7,7 @@ public class Program {
 
         builder.Services.AddControllers();
         ConfigureServices(builder.Services);
-        RegisterCache(builder.Services);
+        builder.Services.RegisterCache();
 
         var app = builder.Build();
 
@@ -26,10 +26,5 @@ public class Program {
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen();
         services.AddMemoryCache();
-    }
-
-    private static void RegisterCache(IServiceCollection services) {
-        services.AddKeyedSingleton<ICacheService, MemoryCache>("memory");
-        services.AddKeyedSingleton<ICacheService, RedisCache>("redis");
     }
 }

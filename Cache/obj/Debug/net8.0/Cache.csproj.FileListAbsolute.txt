@@ -10,3 +10,16 @@
 /Users/daryl/Documents/projects/CacheDemo/Cache/obj/Debug/net8.0/refint/Cache.dll
 /Users/daryl/Documents/projects/CacheDemo/Cache/obj/Debug/net8.0/Cache.pdb
 /Users/daryl/Documents/projects/CacheDemo/Cache/obj/Debug/net8.0/ref/Cache.dll
+/Users/daryl/Documents/projects/CachePoC/Cache/bin/Debug/net8.0/Cache.deps.json
+/Users/daryl/Documents/projects/CachePoC/Cache/bin/Debug/net8.0/Cache.dll
+/Users/daryl/Documents/projects/CachePoC/Cache/bin/Debug/net8.0/Cache.pdb
+/Users/daryl/Documents/projects/CachePoC/Cache/obj/Debug/net8.0/Cache.csproj.AssemblyReference.cache
+/Users/daryl/Documents/projects/CachePoC/Cache/obj/Debug/net8.0/Cache.GeneratedMSBuildEditorConfig.editorconfig
+/Users/daryl/Documents/projects/CachePoC/Cache/obj/Debug/net8.0/Cache.AssemblyInfoInputs.cache
+/Users/daryl/Documents/projects/CachePoC/Cache/obj/Debug/net8.0/Cache.AssemblyInfo.cs
+/Users/daryl/Documents/projects/CachePoC/Cache/obj/Debug/net8.0/Cache.csproj.CoreCompileInputs.cache
+/Users/daryl/Documents/projects/CachePoC/Cache/obj/Debug/net8.0/Cache.sourcelink.json
+/Users/daryl/Documents/projects/CachePoC/Cache/obj/Debug/net8.0/Cache.dll
+/Users/daryl/Documents/projects/CachePoC/Cache/obj/Debug/net8.0/refint/Cache.dll
+/Users/daryl/Documents/projects/CachePoC/Cache/obj/Debug/net8.0/Cache.pdb
+/Users/daryl/Documents/projects/CachePoC/Cache/obj/Debug/net8.0/ref/Cache.dll

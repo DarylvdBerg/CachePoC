@@ -4,7 +4,7 @@ using StackExchange.Redis;
 
 namespace Cache;
 
-public class RedisCache : ICacheService
+internal sealed class RedisCache : ICacheService
 {
     private readonly IDatabase _db;
 

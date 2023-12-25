@@ -20,12 +20,13 @@ public class TestController : ControllerBase
         var memoryCache = _provider.GetRequiredKeyedService<ICacheService>("memory");
         var redisCache = _provider.GetRequiredKeyedService<ICacheService>("redis");
         Console.WriteLine("TEST");
-        // Create product.
+        // Product key to search by.
         var key = "Product.ababa";
 
         // Get from cache(s)
         var result = memoryCache.Get(key, () => {
             return redisCache.Get(key, () => {
+                // Create product hard coded, but this is where you want to call the source system.
                 return new Product() {
                     Id = "ababa",
                     Name = "Test",
